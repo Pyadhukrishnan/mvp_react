@@ -1,14 +1,43 @@
+/**
+ * @file ResetPasswordForm.jsx
+ * @description This component renders a reset password form with an option to navigate back to the login form.
+ * 
+ * @component
+ * @param {Function} setLoginToggle - Function to toggle between the login form and reset password form.
+ * 
+ * @dependencies
+ * - React (useState, useEffect)
+ * - CSS Module (ResetPasswordForm.module.css)
+ */
+
 import React from "react";
 import styles from "./ResetPasswordForm.module.css";
 
+/**
+ * @function ResetPasswordForm
+ * @description Displays a reset password form with a back button to return to the login form.
+ * @param {Object} props - Component properties.
+ * @param {Function} props.setLoginToggle - Function to toggle login form visibility.
+ * @returns {JSX.Element} The reset password form component.
+ */
+
 const ResetPasswordForm = ({ setLoginToggle }) => {
+  /**
+   * @function handleLoginToggle
+   * @description Calls `setLoginToggle` to navigate back to the login form.
+   * @returns {void}
+   */
   const handleLoginToggle = () => {
     setLoginToggle(true);
   };
+
   return (
     <div className={styles.resetPasswordForm}>
+      {/* Reset Password Header */}
       <h2>ResetPasswordForm</h2>
-      <p onClick={handleLoginToggle}>back</p>
+
+      {/* Back Navigation Link */}
+      <p onClick={handleLoginToggle} className={styles.backLink}>back</p>
     </div>
   );
 };

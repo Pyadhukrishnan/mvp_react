@@ -1,12 +1,13 @@
-import React from 'react'
-import LoginForm from '../../module/Login/components/LoginForm/LoginForm'
+import React from 'react';
+import styles from './Home.module.css';
+import withAuth from '../../middleware';
 
 function Home() {
   return (
-    <div>Home
-        <LoginForm />
+    <div className={styles.homePage}>
+      <h2>Home</h2>
     </div>
   )
 }
 
-export default Home
+export default withAuth(Home);
