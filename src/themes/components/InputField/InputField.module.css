@@ -11,12 +11,14 @@
 }
 
 .inputField {
+  color: #1b2331;
+  padding-left: 3px;
   width: 100%;
   border: none;
   outline: none;
   background-color: transparent;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .default button {

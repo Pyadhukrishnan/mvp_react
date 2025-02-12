@@ -1,6 +1,6 @@
 .navbar{
     background-color: #fff;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     padding: 20px 16px;
@@ -8,6 +8,7 @@
     position: fixed;
     z-index: 1000;
     top: 0;
+    justify-content: space-between;
 }
 
 .logo{
@@ -26,4 +27,8 @@
     font-size: 12px;
     font-weight: 500;
     color: #1B2331;
+}
+
+.additional{
+    margin-right: 30px;
 }

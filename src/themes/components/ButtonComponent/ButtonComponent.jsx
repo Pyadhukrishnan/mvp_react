@@ -1,7 +1,7 @@
 import styles from './Button.module.css';
 
 
-const ButtonComponent = ({content,onClick,buttonSize="large",theme="default",}) => {
+const ButtonComponent = ({content,onClick,buttonSize="large",theme="default",disabled=false}) => {
     const themeClass = (theme) => {
         switch(theme){
             case "normal":
@@ -21,7 +21,7 @@ const ButtonComponent = ({content,onClick,buttonSize="large",theme="default",}) 
         }
     }
   return (
-    <button className={`${size(buttonSize)} ${themeClass(theme)}`} onClick={onClick}>
+    <button className={`${size(buttonSize)} ${themeClass(theme)}`} onClick={onClick} disabled={disabled}>
         {content}
     </button>
   )
